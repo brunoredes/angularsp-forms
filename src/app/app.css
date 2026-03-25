@@ -1,0 +1,10 @@
+:host(app-root) {
+    display: flex;
+    background-color: #cdc9c9;
+}
+
+aside {
+    height: 100svh;
+    flex: 1 1 25%;
+    padding: 1rem 2rem;
+}
