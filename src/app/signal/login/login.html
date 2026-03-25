@@ -1,0 +1,14 @@
+<form [formRoot]="form" (submit)="onSubmit()" class="login">
+  <div class="login__field">
+    <label for="email">email</label>
+    <input [formField]="form.email" id="email" type="email" autocomplete="email" inputMode="email" />
+    @for (error of form.email().errors(); track $index) {
+      <span>{{ error.message }}</span>
+    }
+  </div>
+  <div class="login__field">
+    <label for="password">Password</label>
+    <input [formField]="form.password" id="password" type="password" autocomplete="current-password" />
+  </div>
+  <button type="submit" [disabled]="form().submitting() || form().invalid()">Login</button>
+</form>
