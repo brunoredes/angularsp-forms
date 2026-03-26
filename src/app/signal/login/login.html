@@ -3,12 +3,15 @@
     <label for="email">email</label>
     <input [formField]="form.email" id="email" type="email" autocomplete="email" inputMode="email" />
     @for (error of form.email().errors(); track $index) {
-      <span>{{ error.message }}</span>
+    <span>{{ error.message }}</span>
     }
   </div>
   <div class="login__field">
     <label for="password">Password</label>
     <input [formField]="form.password" id="password" type="password" autocomplete="current-password" />
+    @for (error of form.password().errors(); track $index) {
+    <span>{{ error.message }}</span>
+    }
   </div>
   <button type="submit" [disabled]="form().submitting() || form().invalid()">Login</button>
 </form>
