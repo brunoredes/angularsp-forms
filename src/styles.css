@@ -13,10 +13,13 @@ button {
     border-radius: .625rem;
     border: 1px solid #f4f4f4;
     cursor: pointer;
+    background-color: rgb(35, 168, 155);
+    color: #fff;
 }
 
 button:hover {
     border: 1px solid #00000080;
+    background-color: rgba(35, 168, 155, 0.6);
 }
 
 button:disabled {
@@ -35,4 +38,8 @@ input:invalid {
 
 input:valid {
     border: 2px solid #007408;
+}
+
+li {
+    list-style: none;
 }
